@@ -1,0 +1,75 @@
+.nav-bar {
+  cursor: default;
+  margin: auto;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    transition: all 150ms ease-in-out;
+    margin-bottom: 12px;
+    .period {
+      color: #6BAA75;
+    }
+
+    &:hover {
+        background: -webkit-linear-gradient(rgb(71, 221, 196), rgb(245, 48, 219));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(1.09);
+        text-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+  }
+
+  p {
+      
+    :hover {
+      text-decoration: underline;
+      
+    }
+  }
+
+  .colored-subheader-text {
+    color: green;
+    font-weight: bold;
+  }
+
+
+  p::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  p:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  p::before {
+
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: rgb(233, 136, 196);
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  
+  p {
+    position: relative;
+    font-size: 1.2rem;
+  }
+  
+  
+
+
+
+}
+
